@@ -8,6 +8,19 @@ function getPlayerChoice() {
     
     return playerChoice;
 }
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection) {
+        return 0;
+    } else if (
+        (computerSelection === "rock" && playerSelection === "scissors") ||
+        (computerSelection === "scissors" && playerSelection === "paper") ||
+        (computerSelection === "paper" && playerSelection === "rock")
+    ) {
+        return -1;
+    } else {
+        return 1;
+    }
+}
 
 
 
