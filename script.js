@@ -22,5 +22,33 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function game() {
+    let playerCount = 0;
+    let computerCount = 0;
+
+    for (let i = 1; i <= 5; i++) {
+        const playerChoice = getPlayerChoice();
+        const computerChoice = getComputerChoice();
+
+        const roundResult = playRound(playerChoice, computerChoice);
+
+        if (roundResult === 1) {
+            console.log("You WIN!!");
+            playerCount++;
+        } else if (roundResult === -1) {
+            console.log("You LOSE!!");
+            computerCount++;
+        } else {
+            console.log("It's a DRAW!!");
+        }
+    }
+
+    console.log("Final Score:");
+    console.log(`You: ${playerCount}`);
+    console.log(`Computer: ${computerCount}`);
+}
+
+
+game();
 
 
