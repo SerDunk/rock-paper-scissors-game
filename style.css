@@ -1,0 +1,73 @@
+@font-face {
+    font-family: SunnySide;
+    src: url(font/SunnySpellsBasicRegular-Yz1Wv.ttf);
+}
+body{
+    background-color: #D8D9DA;
+    color: #61677A;
+    font-family:"SunnySide",sans-serif;
+}
+
+
+img{
+    height: 100px;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: 100px
+
+}
+.body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+    border-radius: 20px;
+    background-color:#D8D9DA;
+
+}
+.user{
+    font-size: 40px;
+    align-self: flex-end;
+}
+.comp{
+    font-size: 40px;
+    align-self: flex-end;
+}
+.output{
+    background-color:#D8D9DA;
+    height: 400px;
+    width: 700px;
+    border-color: #61677A;
+    border-style: solid;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 80px;
+
+}
+.rock{
+    background-color:#61677A;
+    padding: 40px;
+    border-color: black;
+    border-style: solid;
+}
+
+.paper{
+    background-color:#61677A;
+    padding: 40px;
+    border-color: black;
+    border-style: solid;
+}
+.scissor{
+    background-color:#61677A;
+    padding: 40px;
+    border-color: black;
+    border-style: solid;
+}
