@@ -1,54 +1,75 @@
-function getComputerChoice() {
-    const compChoice = ["rock", "paper", "scissors"];
-    const randomIndex = Math.floor(Math.random() * compChoice.length);
-    return compChoice[randomIndex];
-}
-function getPlayerChoice() {
-    let playerChoice = prompt("Enter your choice (rock, paper, or scissors)").toLowerCase();
-    
-    return playerChoice;
-}
-function playRound(playerSelection, computerSelection) {
-    if (playerSelection === computerSelection) {
-        return 0;
-    } else if (
-        (computerSelection === "rock" && playerSelection === "scissors") ||
-        (computerSelection === "scissors" && playerSelection === "paper") ||
-        (computerSelection === "paper" && playerSelection === "rock")           
-    ) {
-        return -1;
-    } else {
-        return 1;
+
+    const rock = document.querySelector('.rock1');
+    const paper = document.querySelector('.paper1');
+    const scissor = document.querySelector('.scissor1');
+
+    function getPlayerChoice(e){
+        let playerChoice=e.target.className
+        console.log(playerChoice)
     }
-}
 
-function game() {
-    let playerCount = 0;
-    let computerCount = 0;
+    rock.addEventListener('click',getPlayerChoice);
+    paper.addEventListener('click',getPlayerChoice);
+    scissor.addEventListener('click',getPlayerChoice);
 
-    for (let i = 1; i <= 5; i++) {
-        const playerChoice = getPlayerChoice();
-        const computerChoice = getComputerChoice();
 
-        const roundResult = playRound(playerChoice, computerChoice);
+    function getComputerChoice() {
+        const compChoice = ["rock", "paper", "scissors"];
+        const randomIndex = Math.floor(Math.random() * compChoice.length);
+        return compChoice[randomIndex];
+    }
 
-        if (roundResult === 1) {
-            console.log("You WIN!!");
-            playerCount++;
-        } else if (roundResult === -1) {
-            console.log("You LOSE!!");
-            computerCount++;
-        } else {
-            console.log("It's a DRAW!!");
+    function playRound(playerChoice,computerChoice){
+        if (playerChoice==computerChoice){
+            return 0;
+        }
+        else if(playerChoice=='rock1' && computerChoice=='paper1' || playerChoice=='scissor1' && computerChoice=='paper1'
+        || playerChoice=='paper1' && computerChoice=='rock1'){
+            return 1;
+        }
+        else{
+            return -1;
+        } 
+    }
+
+    function game(){
+        for(let i=0;i<5;i++){
+            
         }
     }
 
-    console.log("Final Score:");
-    console.log(`You: ${playerCount}`);
-    console.log(`Computer: ${computerCount}`);
-}
+
+  
+  
+
+    
+
+    
 
 
-game();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
