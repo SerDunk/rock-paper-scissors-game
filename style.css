@@ -29,7 +29,7 @@ img{
     background-color:#D8D9DA;
 
 }
-.uscore,.cscore{
+.userscore,.compscore{
     font-size: 100px;
 }
 .user,.computer{
@@ -53,6 +53,10 @@ img{
     width: 700px;
     border-color: #61677A;
     border-style: solid;
+    font-size: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .buttons{
